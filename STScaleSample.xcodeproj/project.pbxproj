@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E5C8F5F23680AEC0008C271 /* STScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5C8F5E23680AEC0008C271 /* STScale.framework */; };
-		8E5C8F6023680AEC0008C271 /* STScale.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5C8F5E23680AEC0008C271 /* STScale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8E5C8F6023680AEC0008C271 /* STScale.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5C8F5E23680AEC0008C271 /* STScale.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8EC99D712367E2E300C430D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC99D702367E2E300C430D9 /* AppDelegate.m */; };
 		8EC99D742367E2E300C430D9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC99D732367E2E300C430D9 /* SceneDelegate.m */; };
 		8EC99D772367E2E300C430D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC99D762367E2E300C430D9 /* ViewController.m */; };
