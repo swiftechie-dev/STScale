@@ -90,6 +90,7 @@ frameworkファイルをTARGETS→[SELF TARGET]->General->Frameworks,Libraries,A
 // ６０秒間で周りの体組成計をスキャンします。６０秒以内に体組成計が検知できない場合、
 // 接続状態を2（未接続）に変わって、onStateChangedBeforeを呼び出します。
 // もっとスキャンしたい場合、onStateChangedBeforeで再度スキャンしてください。
+// 戻り値：BLE状態。BLEがオフの場合、１が返す、その以外は３が返す。
 [_libScale startScan];
 ```
 
@@ -100,6 +101,8 @@ frameworkファイルをTARGETS→[SELF TARGET]->General->Frameworks,Libraries,A
 // デバイスが接続できない場合、６０秒間で周りの体組成計をスキャンします。６０秒以内に体組成計が検知でき
 // ない場合、接続状態を2（未接続）に変わって、onStateChangedBeforeを呼び出します。
 // もっと待ちたい場合、onStateChangedBeforeで再度接続してください。
+// 戻り値：サポートしないデバイス名が指定する場合、1021が返す
+//        BLEがオフの場合、１が返す、その以外は４が返す。
 [_libScale connectWithName:_name address:_address uuid:_uuid];
 ```
 
@@ -108,6 +111,7 @@ frameworkファイルをTARGETS→[SELF TARGET]->General->Frameworks,Libraries,A
 // height:単位CM、可能範囲（９０〜２２０）、その以外の場合、４が返す
 // age:可能範囲（６〜９９）、その以外の場合、２が返す
 // gender:１は男性、０は女性、その以外の場合、５が返す
+// 正常の場合は０が返す
 [_libScale setUserInfoWithHeight:_txtHeight.text.intValue age:_txtAge.text.intValue gender:_txtGender.text.intValue];
 ```
 
