@@ -4,6 +4,7 @@
 STScaleは士為テック株式会社のBluetooth体組成計Healthy Scaleを接続するためにライブラリーです。
 Objective-CとSwifが両方サポートしますが、今回はObjective-Cのサンプリだけ提供します。
 iOSだけがサポートしていますが、今後Android版を出す予定です。
+xcode10.1の場合、ブランチ[swift3]のバージョンをダウンロードしてください。
 
 ## 利用方法
 
@@ -48,6 +49,7 @@ frameworkファイルをTARGETS→[SELF TARGET]->General->Frameworks,Libraries,A
 }
 
 // 接続した体組成計の体重データが検知した場合のコールバック
+// ※：測定完了後、LEDライトがが点灯しているうちに、再度接続すると、同じデータがくるので、ご注意ください。
 - (void)onDataReceiveWithData:(ScaleData *)data {
 	// ScaleData {
     //    weight,              // 体重、単位（g）
