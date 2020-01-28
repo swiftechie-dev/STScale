@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  STScaleSample
 //
-//  Created by muchunyu on 2019/10/29.
+//  Created by muchunyu on 2019/11/21.
 //  Copyright © 2019 swiftechie. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end
 

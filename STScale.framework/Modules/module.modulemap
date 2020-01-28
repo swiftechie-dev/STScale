@@ -1,0 +1,11 @@
+framework module STScale {
+  umbrella header "STScale.h"
+
+  export *
+  module * { export * }
+}
+
+module STScale.Swift {
+    header "STScale-Swift.h"
+    requires objc
+}

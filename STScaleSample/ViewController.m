@@ -118,11 +118,18 @@
         //    htBodyfatPercentage, // 体脂肪率(%), 精度0.1, 範囲5.0% ~ 75.0%
         //    htWaterPercentage,   // 水分率(%), 精度0.1, 範囲35.0% ~ 75.0%
         //    htMuscle}            // 脱脂防組織量(kg), 精度0.1, 範囲10.0 ~ 120.0
+        printf("%.1f\tisLock:%d\n", ((double)data.weight) / 1000, data.isLockData);
         self->_txtWeight.text = [NSString stringWithFormat:@"%.1f", ((double)data.weight) / 1000];
-        self->_txtImpedance.text = [NSString stringWithFormat:@"%ld", (long)data.impedance];
-        self->_txtBodyfat.text = [NSString stringWithFormat:@"%.01ld", (long)data.htBodyfatPercentage];
-        self->_txtWater.text = [NSString stringWithFormat:@"%.01ld", (long)data.htWaterPercentage];
-        self->_txtMuscle.text = [NSString stringWithFormat:@"%.01ld", (long)data.htMuscle];
+        if (data.isLockData) {
+            // 体重測定完了後のデータはisLockDataがtrueになります。
+            // trueになった時は、体脂肪率などの体組成のだデータが取得できます。
+            // 体組成計のLEDが消していないうちに再度接続すると、同じデータがくるので、ご注意ください。
+            self->_txtImpedance.text = [NSString stringWithFormat:@"%ld", (long)data.impedance];
+        }
+        
+//        self->_txtBodyfat.text = [NSString stringWithFormat:@"%.01ld", (long)data.htBodyfatPercentage];
+//        self->_txtWater.text = [NSString stringWithFormat:@"%.01ld", (long)data.htWaterPercentage];
+//        self->_txtMuscle.text = [NSString stringWithFormat:@"%.01ld", (long)data.htMuscle];
     });
 }
 
