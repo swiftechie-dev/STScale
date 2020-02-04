@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E5AE7D223E2E230001236E5 /* STScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0C31B423E2B1CE000078CB /* STScale.framework */; };
+		8E5AE7D323E2E230001236E5 /* STScale.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0C31B423E2B1CE000078CB /* STScale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8E7C40CF2386435100021858 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C40CE2386435100021858 /* AppDelegate.m */; };
 		8E7C40D22386435100021858 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C40D12386435100021858 /* ViewController.m */; };
 		8E7C40D52386435100021858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7C40D32386435100021858 /* Main.storyboard */; };
 		8E7C40D72386435500021858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7C40D62386435500021858 /* Assets.xcassets */; };
 		8E7C40DA2386435500021858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7C40D82386435500021858 /* LaunchScreen.storyboard */; };
 		8E7C40DD2386435500021858 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C40DC2386435500021858 /* main.m */; };
-		8E7C410023865AD800021858 /* STScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7C40FE23865ACE00021858 /* STScale.framework */; };
-		8E7C410123865AD800021858 /* STScale.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7C40FE23865ACE00021858 /* STScale.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8E7C40FB2386592300021858 /* Embed Frameworks */ = {
+		8E0C31C623E2B422000078CB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8E7C410123865AD800021858 /* STScale.framework in Embed Frameworks */,
+				8E5AE7D323E2E230001236E5 /* STScale.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E0C31B423E2B1CE000078CB /* STScale.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STScale.framework; sourceTree = "<group>"; };
 		8E7C40CA2386435100021858 /* STScaleSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STScaleSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7C40CD2386435100021858 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E7C40CE2386435100021858 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7C410023865AD800021858 /* STScale.framework in Frameworks */,
+				8E5AE7D223E2E230001236E5 /* STScale.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +61,7 @@
 		8E7C40C12386435100021858 = {
 			isa = PBXGroup;
 			children = (
+				8E0C31B423E2B1CE000078CB /* STScale.framework */,
 				8E7C40CC2386435100021858 /* STScaleSample */,
 				8E7C40CB2386435100021858 /* Products */,
 				8E7C40FD23865ACE00021858 /* Frameworks */,
@@ -108,7 +110,7 @@
 				8E7C40C62386435100021858 /* Sources */,
 				8E7C40C72386435100021858 /* Frameworks */,
 				8E7C40C82386435100021858 /* Resources */,
-				8E7C40FB2386592300021858 /* Embed Frameworks */,
+				8E0C31C623E2B422000078CB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,6 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WU368QEG9E;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/STScaleSample/Libs",
@@ -327,9 +330,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftechie.scale.STScaleSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftechie.scale.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -340,6 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WU368QEG9E;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/STScaleSample/Libs",
@@ -351,9 +355,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftechie.scale.STScaleSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftechie.scale.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

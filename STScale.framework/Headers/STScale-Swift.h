@@ -196,12 +196,10 @@ SWIFT_CLASS("_TtC7STScale9BleDevice")
 @end
 
 @class ScaleData;
-@class UserInfo;
 
 SWIFT_CLASS("_TtC7STScale15HTBodyfatParser")
 @interface HTBodyfatParser : NSObject
 + (ScaleData * _Nullable)doParserScaleDataWithData:(NSData * _Nonnull)data SWIFT_WARN_UNUSED_RESULT;
-+ (ScaleData * _Nonnull)doBodyAnalyseWithUserInfo:(UserInfo * _Nonnull)userInfo data:(ScaleData * _Nonnull)data SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -236,25 +234,6 @@ SWIFT_CLASS("_TtC7STScale9ScaleData")
 @property (nonatomic) NSInteger weight;
 @property (nonatomic) NSInteger impedance;
 @property (nonatomic) BOOL isLockData;
-@property (nonatomic) NSInteger errorType;
-@property (nonatomic) double htproteinPercentage;
-@property (nonatomic) NSInteger htBodyAge;
-@property (nonatomic) NSInteger htIdealWeight;
-@property (nonatomic) double htBMI;
-@property (nonatomic) NSInteger htBMR;
-@property (nonatomic) NSInteger htVFAL;
-@property (nonatomic) double htBone;
-@property (nonatomic) double htBodyfatPercentage;
-@property (nonatomic) double htWaterPercentage;
-@property (nonatomic) double htMuscle;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable htproteinRatingList;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable htBMIRatingList;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable htBMRRatingList;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable htVFALRatingList;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable htBoneRatingList;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable htBodyfatRatingList;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable htWaterRatingList;
-@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable htMuscleRatingList;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtHeight;
 @property (weak, nonatomic) IBOutlet UITextField *txtAge;
 @property (weak, nonatomic) IBOutlet UITextField *txtGender;
+@property (weak, nonatomic) IBOutlet UITextView *txtLog;
 @property (weak, nonatomic) IBOutlet UILabel *txtWeight;
 @property (weak, nonatomic) IBOutlet UILabel *txtImpedance;
 @property (weak, nonatomic) IBOutlet UILabel *txtBodyfat;
@@ -119,6 +120,7 @@
         //    htWaterPercentage,   // 水分率(%), 精度0.1, 範囲35.0% ~ 75.0%
         //    htMuscle}            // 脱脂防組織量(kg), 精度0.1, 範囲10.0 ~ 120.0
         printf("%.1f\tisLock:%d\n", ((double)data.weight) / 1000, data.isLockData);
+        self->_txtLog.text = [NSString stringWithFormat:@"%@%.1f\tisLock:%d\n", _txtLog.text, ((double)data.weight) / 1000, data.isLockData];
         self->_txtWeight.text = [NSString stringWithFormat:@"%.1f", ((double)data.weight) / 1000];
         if (data.isLockData) {
             // 体重測定完了後のデータはisLockDataがtrueになります。
