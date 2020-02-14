@@ -40,6 +40,9 @@
     _libScale = [STScaleLibrary getInstance];
     // コールバックを設定
     [_libScale setCallBackWithCallback:self];
+//    printf("startScan\n");
+    NSInteger scanResult = [_libScale startScan];
+    self->_txtLog.text = [NSString stringWithFormat:@"%@scanResult:%d\n", _txtLog.text, scanResult];
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     _name = [ud valueForKey:@"name"];
@@ -67,7 +70,8 @@
     // ６０秒間で周りの体組成計をスキャンします。６０秒以内に体組成計が検知できない場合、
     // 接続状態を2（未接続）に変わって、onStateChangedBeforeを呼び出します。
     // もっとスキャンしたい場合、onStateChangedBeforeで再度スキャンしてください。
-    [_libScale startScan];
+    NSInteger scanResult = [_libScale startScan];
+    self->_txtLog.text = [NSString stringWithFormat:@"%@scanResult:%d\n", _txtLog.text, scanResult];
 }
 
 - (void)saveDeviceInfo:(NSString *)name addr:(NSString *)addr uuid:(NSString *)uuid {
